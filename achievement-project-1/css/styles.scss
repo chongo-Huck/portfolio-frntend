@@ -1,0 +1,219 @@
+/*
+Colors used
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+ */
+ :root {
+    --primary-color: #357b70;
+    --secondary-color: #e0b354;
+    --dark-grey: #2b2b2b;
+  }
+  body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.6;
+    background-color: var(--dark-grey); 
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--secondary-color)
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color:var(--primary-color)
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color)
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color)
+  }
+  h5 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color)
+  }
+  label {
+    color: var(--secondary-color)
+  }
+  p {
+    color: var(--primary-color)
+  }
+  li {
+    color: var(--secondary-color)
+  }
+  footer {
+    color:#f700ff
+  }
+  a:visited {
+    color: #e100ff;
+  }
+  thead {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #35bb04
+  }
+  a:hover, a:focus {
+    text-decoration: none;
+  }
+  a:active {
+    color: var(--secondary-color);
+  }
+  a {
+    color: var(--secondary-color);
+  }
+  .button, button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .button__secondary {
+    background-color: #e0b354;
+    color: #2b2b2b;
+  }
+  .profile__portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+  .page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile {
+    max-width: 700px;
+    margin: 0 auto;
+    color:cadetblue
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+  }
+  .page-header__item:last-child {
+    flex: 0 1 200px;
+    flex-grow: 1;
+    text-align: center;
+  }
+  .navigation-list {
+    list-style-type: none;
+  }
+  
+  .navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .grid__item {
+    background-color: lightgray;
+  }
+  .table {
+    text-align: center;
+    color: var(--secondary-color);
+    }
+    @media all and (min-width: 320px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    @media all and (min-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media all and (min-width: 768px){
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @media all and (min-width: 750px) {
+      .grid {
+        grid-gap: 10px;
+      }
+      .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+      }
+      h1 {
+        font-size: 22px;
+      }
+    }
+    main{
+      text-align: center;
+    }
+    @keyframes color-change {
+      0% {
+        fill: #edc655;
+      }
+      50% {
+        fill: #fcffad;
+      }
+      100% {
+        fill: #f76414;
+      }
+    }
+    .sun {
+      animation: 4s color-change infinite alternate linear;
+    }
+  
+    @keyframes cloud-move {
+      from {
+        transform: translate(0, 50px);
+      }
+      to {
+        transform: translate(200px, 50px);
+      }
+    }
+  
+    .cloud-front {
+      animation: 30s cloud-move infinite alternate linear;
+    }
+  
+    @keyframes cloud-move-reverse {
+      from {
+        transform: translate(446px, 48px);
+      }
+      to {
+        transform: translate(100px, 48px);
+      }
+    }
+    .cloud-back {
+      animation: 34s cloud-move-reverse infinite alternate linear;
+    }
